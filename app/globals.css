@@ -3,6 +3,98 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Calm Premium Minimalism palette (V1) */
+  --calm-bg: #F5F1EB;
+  --calm-surface: #FFFFFF;
+  --calm-text: #111827;
+  --calm-text-muted: #6B7280;
+  --calm-accent: #2563EB;
+  --calm-accent-soft: #4B8063;
+  --calm-border: #E5E7EB;
+
+  /* Calm V2 - Earthy Warmth palette (Skims-inspired) */
+  --calm2-sand: #F7F3EF;
+  --calm2-sand-dark: #EDE7E2;
+  --calm2-bone: #FCFAF8;
+  --calm2-taupe: #C8BEB5;
+  --calm2-clay: #B3A89F;
+  --calm2-border: #D9D3CC;
+  --calm2-text: #2B2A28;
+  --calm2-text-muted: #6B6560;
+  --calm2-accent: #C6B299;
+  --calm2-accent-dark: #A48D77;
+
+  /* Calm V3 - More Color, Contrast & Depth palette */
+  --calm3-sand-light: #F8F3ED;
+  --calm3-sand: #F1E6DA;
+  --calm3-sand-deep: #E0D1C2;
+  --calm3-bone: #FCFAF8;
+  --calm3-clay: #B8A99A;
+  --calm3-border: #D8CFC5;
+  --calm3-text: #2A2622;
+  --calm3-muted: #6F655C;
+  --calm3-green-soft: #C9D7C5;
+  --calm3-green-deep: #5C7A66;
+  --calm3-orange-soft: #E4C2A4;
+  --calm3-orange-deep: #C38A4C;
+  --calm3-cta-from: #CFB496;
+  --calm3-cta-to: #B28A63;
+
+  /* Calm V4 - Premium Visual Identity palette */
+  --calm4-sand-light: #F8F3ED;
+  --calm4-sand: #F1E6DA;
+  --calm4-sand-deep: #E0D1C2;
+  --calm4-bone: #FCFAF8;
+  --calm4-clay: #B8A99A;
+  --calm4-green-soft: #C9D7C5;
+  --calm4-green-deep: #5C7A66;
+  --calm4-orange-soft: #E4C2A4;
+  --calm4-orange-deep: #C38A4C;
+  --calm4-border: #D8CFC5;
+  --calm4-text: #2A2622;
+  --calm4-muted: #6F655C;
+  --calm4-cta-from: #CFB496;
+  --calm4-cta-to: #B28A63;
+
+  /* Playful Premium B2B palette v2 - Enhanced contrast and depth */
+  --playful-bg: #FAF5FF;
+  --playful-bg-alt: #F3E8FF;
+  --playful-bg-muted: #F8FAFC;
+  --playful-surface: #FFFFFF;
+  --playful-surface-elevated: #FFFFFF;
+  --playful-pink: #EC4899;
+  --playful-pink-soft: #FDF2F8;
+  --playful-purple: #8B5CF6;
+  --playful-purple-soft: #EDE9FE;
+  --playful-purple-deep: #7C3AED;
+  --playful-blue: #0EA5E9;
+  --playful-blue-soft: #E0F2FE;
+  --playful-text: #0F172A;
+  --playful-text-muted: #475569;
+  --playful-border: #E2E8F0;
+  --playful-border-strong: #CBD5E1;
+  --playful-glow: rgba(139, 92, 246, 0.15);
+
+  /* Truth Engine (Corporate Intelligence) palette - Light variant */
+  --truth-bg: #F8FAFC;
+  --truth-panel: #FFFFFF;
+  --truth-text: #0F172A;
+  --truth-muted: #475569;
+  --truth-accent: #2563EB;
+  --truth-border: #E2E8F0;
+
+  /* Truth Engine V2 (Corporate Intelligence) palette - Dark variant */
+  --truth2-bg: #020617;
+  --truth2-bg-alt: #0F172A;
+  --truth2-panel: #0F172A;
+  --truth2-panel-alt: #1E293B;
+  --truth2-text: #F1F5F9;
+  --truth2-muted: #94A3B8;
+  --truth2-accent: #38BDF8;
+  --truth2-accent-hover: #0EA5E9;
+  --truth2-border: #334155;
+  --truth2-glow: rgba(56, 189, 248, 0.15);
 }
 
 @theme inline {
@@ -10,6 +102,129 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Calm theme colors (V1) */
+  --color-calm-bg: var(--calm-bg);
+  --color-calm-surface: var(--calm-surface);
+  --color-calm-text: var(--calm-text);
+  --color-calm-text-muted: var(--calm-text-muted);
+  --color-calm-accent: var(--calm-accent);
+  --color-calm-accent-soft: var(--calm-accent-soft);
+  --color-calm-border: var(--calm-border);
+
+  /* Calm V2 theme colors (Earthy Warmth) */
+  --color-calm2-sand: var(--calm2-sand);
+  --color-calm2-sand-dark: var(--calm2-sand-dark);
+  --color-calm2-bone: var(--calm2-bone);
+  --color-calm2-taupe: var(--calm2-taupe);
+  --color-calm2-clay: var(--calm2-clay);
+  --color-calm2-border: var(--calm2-border);
+  --color-calm2-text: var(--calm2-text);
+  --color-calm2-text-muted: var(--calm2-text-muted);
+  --color-calm2-accent: var(--calm2-accent);
+  --color-calm2-accent-dark: var(--calm2-accent-dark);
+
+  /* Calm V2 shadows - Warm depth */
+  --shadow-calm2: 0 20px 50px rgba(43, 42, 40, 0.08);
+  --shadow-calm2-soft: 0 8px 24px rgba(43, 42, 40, 0.05);
+  --shadow-calm2-card: 0 4px 16px rgba(43, 42, 40, 0.06);
+  --shadow-calm2-card-hover: 0 12px 32px rgba(43, 42, 40, 0.1);
+
+  /* Calm V3 theme colors */
+  --color-calm3-sand-light: var(--calm3-sand-light);
+  --color-calm3-sand: var(--calm3-sand);
+  --color-calm3-sand-deep: var(--calm3-sand-deep);
+  --color-calm3-bone: var(--calm3-bone);
+  --color-calm3-clay: var(--calm3-clay);
+  --color-calm3-border: var(--calm3-border);
+  --color-calm3-text: var(--calm3-text);
+  --color-calm3-muted: var(--calm3-muted);
+  --color-calm3-green-soft: var(--calm3-green-soft);
+  --color-calm3-green-deep: var(--calm3-green-deep);
+  --color-calm3-orange-soft: var(--calm3-orange-soft);
+  --color-calm3-orange-deep: var(--calm3-orange-deep);
+  --color-calm3-cta-from: var(--calm3-cta-from);
+  --color-calm3-cta-to: var(--calm3-cta-to);
+
+  /* Calm V3 shadows - Enhanced depth */
+  --shadow-calm3: 0 12px 40px rgba(42, 38, 34, 0.06);
+  --shadow-calm3-card: 0 12px 40px rgba(42, 38, 34, 0.06);
+  --shadow-calm3-card-hover: 0 18px 45px rgba(42, 38, 34, 0.08);
+
+  /* Calm V4 theme colors */
+  --color-calm4-sand-light: var(--calm4-sand-light);
+  --color-calm4-sand: var(--calm4-sand);
+  --color-calm4-sand-deep: var(--calm4-sand-deep);
+  --color-calm4-bone: var(--calm4-bone);
+  --color-calm4-clay: var(--calm4-clay);
+  --color-calm4-green-soft: var(--calm4-green-soft);
+  --color-calm4-green-deep: var(--calm4-green-deep);
+  --color-calm4-orange-soft: var(--calm4-orange-soft);
+  --color-calm4-orange-deep: var(--calm4-orange-deep);
+  --color-calm4-border: var(--calm4-border);
+  --color-calm4-text: var(--calm4-text);
+  --color-calm4-muted: var(--calm4-muted);
+  --color-calm4-cta-from: var(--calm4-cta-from);
+  --color-calm4-cta-to: var(--calm4-cta-to);
+
+  /* Calm V4 shadows - Premium depth */
+  --shadow-calm4-sm: 0 2px 8px rgba(42, 38, 34, 0.04);
+  --shadow-calm4: 0 6px 30px rgba(42, 38, 34, 0.08);
+  --shadow-calm4-lg: 0 12px 40px rgba(42, 38, 34, 0.1);
+  --shadow-calm4-card: 0 8px 32px rgba(42, 38, 34, 0.06);
+  --shadow-calm4-card-hover: 0 16px 48px rgba(42, 38, 34, 0.1);
+  --shadow-calm4-inner: inset 0 2px 4px rgba(42, 38, 34, 0.06);
+  --shadow-calm4-glow: 0 0 40px rgba(201, 215, 197, 0.3);
+
+  /* Playful theme colors v2 */
+  --color-playful-bg: var(--playful-bg);
+  --color-playful-bg-alt: var(--playful-bg-alt);
+  --color-playful-bg-muted: var(--playful-bg-muted);
+  --color-playful-surface: var(--playful-surface);
+  --color-playful-surface-elevated: var(--playful-surface-elevated);
+  --color-playful-pink: var(--playful-pink);
+  --color-playful-pink-soft: var(--playful-pink-soft);
+  --color-playful-purple: var(--playful-purple);
+  --color-playful-purple-soft: var(--playful-purple-soft);
+  --color-playful-purple-deep: var(--playful-purple-deep);
+  --color-playful-blue: var(--playful-blue);
+  --color-playful-blue-soft: var(--playful-blue-soft);
+  --color-playful-text: var(--playful-text);
+  --color-playful-text-muted: var(--playful-text-muted);
+  --color-playful-border: var(--playful-border);
+  --color-playful-border-strong: var(--playful-border-strong);
+  --color-playful-glow: var(--playful-glow);
+
+  /* Playful shadows v2 - Enhanced depth */
+  --shadow-playful: 0 20px 50px rgba(15, 23, 42, 0.1);
+  --shadow-playful-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+  --shadow-playful-glow: 0 0 40px rgba(139, 92, 246, 0.12);
+  --shadow-playful-card: 0 4px 20px rgba(15, 23, 42, 0.08);
+  --shadow-playful-card-hover: 0 12px 40px rgba(139, 92, 246, 0.15);
+
+  /* Playful spacing */
+  --spacing-section-y: 6rem;
+  --spacing-section-y-lg: 8rem;
+
+  /* Truth Engine theme colors */
+  --color-truth-bg: var(--truth-bg);
+  --color-truth-panel: var(--truth-panel);
+  --color-truth-text: var(--truth-text);
+  --color-truth-muted: var(--truth-muted);
+  --color-truth-accent: var(--truth-accent);
+  --color-truth-border: var(--truth-border);
+
+  /* Truth Engine V2 theme colors (Dark) */
+  --color-truth2-bg: var(--truth2-bg);
+  --color-truth2-bg-alt: var(--truth2-bg-alt);
+  --color-truth2-panel: var(--truth2-panel);
+  --color-truth2-panel-alt: var(--truth2-panel-alt);
+  --color-truth2-text: var(--truth2-text);
+  --color-truth2-muted: var(--truth2-muted);
+  --color-truth2-accent: var(--truth2-accent);
+  --color-truth2-accent-hover: var(--truth2-accent-hover);
+  --color-truth2-border: var(--truth2-border);
+  --color-truth2-glow: var(--truth2-glow);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,8 +1,26 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(npm install:*)",
+      "Bash(del \"c:\\Users\\mosje\\Desktop\\winly-brand-territories\\winly-brand-territories\\src\\app\\truth-engine\\page.tsx\")",
+      "Bash(npm run build:*)",
+      "Bash(npx tsc:*)",
+      "Bash(dir /B:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(for:*)",
+      "Bash(do mv \"$f\" \"$f%.tsx-v1.tsx\")",
+      "Bash(done)",
+      "Bash(do mv \"$f\" \"$f%-v2.tsx-v1.tsx\")",
+      "Bash(npx playwright:*)",
+      "Bash(timeout 90 npx playwright install:*)",
+      "Bash(node inspect-devin.js:*)",
+      "Bash(node inspect-devin-2.js:*)",
+      "Bash(node inspect-devin-3.js:*)",
+      "Bash(del inspect-devin.js inspect-devin-2.js inspect-devin-3.js)",
+      "Bash(del:*)",
+      "Bash(node:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []

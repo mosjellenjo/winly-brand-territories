@@ -1,0 +1,7 @@
+export { HeroTruthEngineV9 } from './HeroTruthEngine-v9'
+export { SocialProofTruthEngineV9 } from './SocialProofTruthEngine-v9'
+export { UseCasesTruthEngineV9 } from './UseCasesTruthEngine-v9'
+export { ValuePropsTruthEngineV9 } from './ValuePropsTruthEngine-v9'
+export { FeaturesTruthEngineV9 } from './FeaturesTruthEngine-v9'
+export { DataTransparencySectionV9 } from './DataTransparencySection-v9'
+export { FinalCtaTruthEngineV9 } from './FinalCtaTruthEngine-v9'

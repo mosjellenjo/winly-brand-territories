@@ -1,0 +1,7 @@
+export { HeroTruthEngineV13 } from './HeroTruthEngine-v13'
+export { SocialProofTruthEngineV13 } from './SocialProofTruthEngine-v13'
+export { UseCasesTruthEngineV13 } from './UseCasesTruthEngine-v13'
+export { ValuePropsTruthEngineV13 } from './ValuePropsTruthEngine-v13'
+export { FeaturesTruthEngineV13 } from './FeaturesTruthEngine-v13'
+export { DataTransparencySectionV13 } from './DataTransparencySection-v13'
+export { FinalCtaTruthEngineV13 } from './FinalCtaTruthEngine-v13'

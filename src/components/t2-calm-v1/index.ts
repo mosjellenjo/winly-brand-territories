@@ -1,0 +1,8 @@
+export { HeroT2CalmV1 } from './HeroT2CalmV1'
+export { SocialProofT2CalmV1 } from './SocialProofT2CalmV1'
+export { ValuePropsT2CalmV1 } from './ValuePropsT2CalmV1'
+export { UnifiedDataModelT2CalmV1 } from './UnifiedDataModelT2CalmV1'
+export { UseCasesT2CalmV1 } from './UseCasesT2CalmV1'
+export { FeaturesT2CalmV1 } from './FeaturesT2CalmV1'
+export { DataTransparencyT2CalmV1 } from './DataTransparencyT2CalmV1'
+export { FinalCtaT2CalmV1 } from './FinalCtaT2CalmV1'
