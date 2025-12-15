@@ -1,0 +1,7 @@
+export { HeroCloud2V1 } from './HeroCloud2V1'
+export { SocialProofCloud2V1 } from './SocialProofCloud2V1'
+export { UseCasesCloud2V1 } from './UseCasesCloud2V1'
+export { ValuePropsCloud2V1 } from './ValuePropsCloud2V1'
+export { FeaturesCloud2V1 } from './FeaturesCloud2V1'
+export { DataTransparencyCloud2V1 } from './DataTransparencyCloud2V1'
+export { FinalCtaCloud2V1 } from './FinalCtaCloud2V1'

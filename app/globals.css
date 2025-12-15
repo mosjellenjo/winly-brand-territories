@@ -95,6 +95,21 @@
   --truth2-accent-hover: #0EA5E9;
   --truth2-border: #334155;
   --truth2-glow: rgba(56, 189, 248, 0.15);
+
+  /* T5 Cloud (Nordic Weather Intelligence) palette */
+  --cloud-bg: #F9FAFB;
+  --cloud-bg-alt: #F3F4F6;
+  --cloud-surface: #FFFFFF;
+  --cloud-text: #1F2937;
+  --cloud-text-muted: #6B7280;
+  --cloud-blue: #2563EB;
+  --cloud-blue-soft: #DBEAFE;
+  --cloud-blue-deep: #1D4ED8;
+  --cloud-orange: #F59E0B;
+  --cloud-orange-soft: #FEF3C7;
+  --cloud-orange-deep: #D97706;
+  --cloud-border: #E5E7EB;
+  --cloud-border-strong: #D1D5DB;
 }
 
 @theme inline {
@@ -225,6 +240,27 @@
   --color-truth2-accent-hover: var(--truth2-accent-hover);
   --color-truth2-border: var(--truth2-border);
   --color-truth2-glow: var(--truth2-glow);
+
+  /* T5 Cloud theme colors */
+  --color-cloud-bg: var(--cloud-bg);
+  --color-cloud-bg-alt: var(--cloud-bg-alt);
+  --color-cloud-surface: var(--cloud-surface);
+  --color-cloud-text: var(--cloud-text);
+  --color-cloud-text-muted: var(--cloud-text-muted);
+  --color-cloud-blue: var(--cloud-blue);
+  --color-cloud-blue-soft: var(--cloud-blue-soft);
+  --color-cloud-blue-deep: var(--cloud-blue-deep);
+  --color-cloud-orange: var(--cloud-orange);
+  --color-cloud-orange-soft: var(--cloud-orange-soft);
+  --color-cloud-orange-deep: var(--cloud-orange-deep);
+  --color-cloud-border: var(--cloud-border);
+  --color-cloud-border-strong: var(--cloud-border-strong);
+
+  /* T5 Cloud shadows */
+  --shadow-cloud: 0 10px 40px rgba(31, 41, 55, 0.08);
+  --shadow-cloud-soft: 0 4px 20px rgba(31, 41, 55, 0.05);
+  --shadow-cloud-card: 0 6px 24px rgba(31, 41, 55, 0.06);
+  --shadow-cloud-card-hover: 0 12px 36px rgba(31, 41, 55, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -238,4 +274,142 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Weather mood animation for T6 Cloud */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Cloud drift animations - soft, organic movement like yr.no */
+@keyframes cloud-drift-1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translate(15px, -8px) scale(1.05);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(25px, 5px) scale(1.1);
+    opacity: 0.45;
+  }
+  75% {
+    transform: translate(10px, 10px) scale(1.02);
+    opacity: 0.55;
+  }
+}
+
+@keyframes cloud-drift-2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.35;
+  }
+  33% {
+    transform: translate(-20px, 12px) scale(1.08);
+    opacity: 0.45;
+  }
+  66% {
+    transform: translate(-10px, -15px) scale(0.95);
+    opacity: 0.4;
+  }
+}
+
+@keyframes cloud-drift-3 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  20% {
+    transform: translate(8px, 15px) scale(1.1);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translate(20px, 8px) scale(1.05);
+    opacity: 0.35;
+  }
+  60% {
+    transform: translate(12px, -10px) scale(0.98);
+    opacity: 0.45;
+  }
+  80% {
+    transform: translate(-5px, -5px) scale(1.02);
+    opacity: 0.38;
+  }
+}
+
+@keyframes cloud-drift-4 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(-15px, -12px) scale(1.15);
+    opacity: 0.4;
+  }
+}
+
+/* Sun movement animation for sunny mood - moves in arc from left to right */
+@keyframes sun-move {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  25% {
+    transform: translate(80%, -50%);
+  }
+  50% {
+    transform: translate(175%, -70%);
+  }
+  75% {
+    transform: translate(270%, -50%);
+  }
+  100% {
+    transform: translate(350%, 0%);
+  }
+}
+
+/* Sun glow pulsing animation */
+@keyframes sun-glow-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+/* Rain fall animations - move along the gradient angle (105deg = down and slightly left) */
+@keyframes rain-fall-1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-15%, 50%);
+  }
+}
+
+@keyframes rain-fall-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-18%, 55%);
+  }
+}
+
+@keyframes rain-fall-3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-12%, 45%);
+  }
 }
