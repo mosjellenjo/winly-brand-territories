@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from 'react'
 
 // Weather mood colors for the preview frame - softer, understated
-// Removed 'clear' mood - now cycles: sunny → cloudy → rainy → sunny
+// Cycles: sunny → rainy → cloudy → sunny
 const weatherMoods = [
-  { name: 'sunny', colors: ['rgba(251, 191, 36, 0.35)', 'rgba(245, 158, 11, 0.25)', 'rgba(252, 211, 77, 0.18)'] },
-  { name: 'cloudy', colors: ['rgba(148, 163, 184, 0.4)', 'rgba(100, 116, 139, 0.3)', 'rgba(203, 213, 225, 0.2)'] },
-  { name: 'rainy', colors: ['rgba(99, 102, 241, 0.35)', 'rgba(79, 70, 229, 0.25)', 'rgba(129, 140, 248, 0.18)'] },
+  { name: 'sunny', colors: ['rgba(251, 191, 36, 0.35)', 'rgba(245, 158, 11, 0.25)', 'rgba(252, 211, 77, 0.18)'], duration: 15000 },
+  { name: 'rainy', colors: ['rgba(99, 102, 241, 0.35)', 'rgba(79, 70, 229, 0.25)', 'rgba(129, 140, 248, 0.18)'], duration: 12000 },
+  { name: 'cloudy', colors: ['rgba(148, 163, 184, 0.4)', 'rgba(100, 116, 139, 0.3)', 'rgba(203, 213, 225, 0.2)'], duration: 7000 },
 ]
 
 export function HeroCloud2V1() {
@@ -28,9 +28,10 @@ export function HeroCloud2V1() {
   useEffect(() => {
     let transitionFrame: number
     let startTime = Date.now()
-    const cycleDuration = 15000 // 15 seconds per mood for very slow, smooth transitions
+    let currentMoodIdx = weatherMoodIndex
 
     const animate = () => {
+      const cycleDuration = weatherMoods[currentMoodIdx].duration
       const elapsed = Date.now() - startTime
       const cycleProgress = (elapsed % cycleDuration) / cycleDuration
 
@@ -43,7 +44,8 @@ export function HeroCloud2V1() {
       // Change mood at cycle end
       if (elapsed >= cycleDuration) {
         startTime = Date.now()
-        setWeatherMoodIndex((prev) => (prev + 1) % weatherMoods.length)
+        currentMoodIdx = (currentMoodIdx + 1) % weatherMoods.length
+        setWeatherMoodIndex(currentMoodIdx)
       }
 
       transitionFrame = requestAnimationFrame(animate)
@@ -314,7 +316,7 @@ export function HeroCloud2V1() {
                   href="#"
                   className="inline-flex items-center justify-center px-6 py-3.5 text-base font-normal text-white rounded-lg transition-all hover:opacity-90 bg-[#3B82F6] shadow-lg shadow-blue-500/25"
                 >
-                  Se hvordan det fungerer
+                  Start prøveperiode
                   <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
@@ -323,7 +325,7 @@ export function HeroCloud2V1() {
 
               <p className="mt-8 text-slate-500 text-lg leading-relaxed">
                 Glem anbudsvarsling og AI som lapper sammen tilbud i siste liten -{' '}
-                <span className="text-slate-700 font-medium">Winly lar deg ligge foran</span>, planlegge ressurser og jobbe strategisk lenge før utlysningen kommer.
+                <span className="text-slate-700 font-medium">Winly gir deg innsikten du trenger</span> for å planlegge ressurser og jobbe strategisk lenge før utlysningen kommer.
               </p>
 
               {/* Workflow Steps */}
