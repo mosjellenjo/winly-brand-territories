@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WINLY · Marketing Website (Next.js)
 
-## Getting Started
+Dette repoet inneholder hele kildekoden for Winlys markedsnettsted – inkludert fire alternative brand territories som skal designes, testes og utvikles parallelt.  
+Målet er å bygge fire distinkte landing pages for winly.no, basert på ulike visuelle og kommunikative retninger, før ett endelig konsept velges.
 
-First, run the development server:
+---
 
-```bash
+## 📁 Prosjektstruktur
+
+/app
+/modern-tech
+/calm
+/playful
+/truth-engine
+/components
+/docs
+
+markdown
+Copy code
+
+### `/app/*`  
+Routes for hvert brand territory:
+
+- `/modern-tech`
+- `/calm`
+- `/playful`
+- `/truth-engine`
+
+Hver mappe inneholder en komplett, territorie-spesifikk landing page basert på dokumentasjonen i `/docs`.
+
+### `/components/*`  
+Modulære komponenter – én komponent per seksjon per territorium.
+
+### `/docs`  
+All strategisk dokumentasjon for brand, tone, struktur og tekst:
+
+- `WINLY_BRAND_FOUNDATION.md`
+- `WINLY_BRAND_BOOK_V1.md`
+- `WINLY_MISSION_VISION_NARRATIVE.md`
+- `TERRITORY_1_Modern_Tech_Excellence.md`
+- `TERRITORY_2_Calm_Premium_Minimalism.md`
+- `TERRITORY_3_Playful_Premium_B2B.md`
+- `TERRITORY_4_Corporate_Truth_Engine.md`
+
+Dette er **den eneste autoritative kilden** for all tekst og struktur.
+
+---
+
+## 🎨 Brand Territory Workflow
+
+Hvert territorium bygges slik:
+
+1. Les territoriets `.md`-fil i `/docs`
+2. Claude Code genererer:
+   - `app/<territory>/page.tsx`
+   - `components/<territory>/*.tsx`
+3. Alle seksjoner bygges som egne komponenter
+4. Tekst kopieres direkte fra `.md`-filene (ingen improvisasjon)
+5. Design implementeres i tråd med hver territoriefil
+6. Hero visuals / illustrations hentes via NanoBanana eller Veo
+
+Formålet er å teste **fire svært forskjellige retninger** før Winly velger én.
+
+---
+
+## 🚀 Kom i gang
+
+Installer avhengigheter:
+
+npm install
+
+powershell
+Copy code
+
+Start dev-server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+yaml
+Copy code
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Åpne:  
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌐 Deploy til Vercel
 
-To learn more about Next.js, take a look at the following resources:
+Prosjektet er fullt kompatibelt med Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deploy via CLI:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+vercel
 
-## Deploy on Vercel
+yaml
+Copy code
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Eller via dashboard:  
+https://vercel.com/new
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🤖 Arbeidsflyt med Claude Code / Cursor
+
+Når du jobber i Cursor:
+
+1. Åpne prosjektet  
+2. Last inn **hele `/docs`** som global kontekst  
+3. Si:  
+   > “Bygg landing page for TERRITORY_X basert på dokumentasjonen i /docs.”  
+4. Claude genererer komponenter + `page.tsx`  
+5. Test i dev-server  
+6. Iterate → commit → push → deploy
+
+**Regel:**  
+All tekst kommer 100% fra `.md`-filene.  
+Ingen improvisert copy.
+
+---
+
+## 🧭 Hva repoet IKKE inneholder
+
+- Ingen backend  
+- Ingen APIer  
+- Ingen datamodell  
+- Ingen CRM-funksjoner  
+- Ingen produkt-UI  
+- Ingen AI-funksjonalitet  
+
+Dette repoet inneholder **kun markedsnettstedet** og de fire territorie-implementasjonene.
+
+---
+
+## ✔️ Status
+
+- ✔ Brand Foundation ferdig  
+- ✔ Mission/Vision/Narrative ferdig  
+- ✔ Territorium 1–4 ferdig skrevet  
+- ☐ Bygge Territory 1 i Next.js  
+- ☐ Bygge Territory 2–4  
+- ☐ Hero visuals (NanoBanana/Veo)  
+- ☐ Territory-testing  
+- ☐ Valg av endelig brand direction  
+- ☐ Identity v1.0 launch  
+
+---
+
+## 📬 Kontakt
+
+For spørsmål: kontakt Jo eller bruk Winly-prosjektet i ChatGPT.
+
+---

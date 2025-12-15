@@ -1,6 +1,6 @@
 'use client'
 
-export function DataTransparencyCloud2V1() {
+export function WhatWeAreNotSectionV1() {
   const notItems = [
     {
       icon: <CatalogIcon className="w-8 h-8" />,
@@ -20,51 +20,62 @@ export function DataTransparencyCloud2V1() {
   ]
 
   return (
-    <section className="relative bg-slate-50 py-24">
-      <div style={{ padding: '0 70px' }}>
-        <div className="mx-auto" style={{ maxWidth: 'calc(100% - 140px)' }}>
-          {/* Section header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-normal text-slate-800 tracking-tight">
-              Hva vi{' '}
-              <span
-                className="line-through bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: 'linear-gradient(90deg, rgb(59, 130, 246), rgb(14, 165, 233), rgb(6, 182, 212))',
-                }}
-              >
-                ikke
-              </span>{' '}
-              er
-            </h2>
-            <p className="mt-4 text-lg text-slate-500">
-              Ikke en katalog. Ikke en AI-chatbot. Ikke gjetning.
-            </p>
+    <section className="py-20 md:py-28 bg-[var(--cloud-bg)]">
+      <div className="mx-auto max-w-6xl px-6">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[var(--cloud-text)]">
+            Hva vi <span className="text-[var(--cloud-text-muted)] line-through">ikke</span> er
+          </h2>
+          <p className="mt-4 text-lg text-[var(--cloud-text-muted)]">
+            Ikke en katalog. Ikke en AI-chatbot. Ikke gjetning.
+          </p>
+        </div>
+
+        {/* Not items grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {notItems.map((item, index) => (
+            <div
+              key={index}
+              className="relative bg-white rounded-2xl p-8 border border-[var(--cloud-border)] text-center group hover:border-red-200 transition-colors"
+            >
+              {/* X mark in corner */}
+              <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-red-50 text-red-400 flex items-center justify-center">
+                <XIcon className="w-4 h-4" />
+              </div>
+
+              {/* Icon */}
+              <div className="w-16 h-16 rounded-xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-6 group-hover:bg-red-50 group-hover:text-red-400 transition-colors">
+                {item.icon}
+              </div>
+
+              <h3 className="text-xl font-semibold text-[var(--cloud-text)] mb-3">{item.title}</h3>
+              <p className="text-[var(--cloud-text-muted)]">{item.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* What we ARE - trust statement */}
+        <div className="relative bg-gradient-to-br from-[var(--cloud-blue-soft)] to-white rounded-2xl p-8 md:p-12 border border-[var(--cloud-blue)]/20">
+          {/* Checkmark badge */}
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[var(--cloud-blue)] text-white flex items-center justify-center shadow-lg">
+            <CheckIcon className="w-6 h-6" />
           </div>
 
-          {/* Not items grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {notItems.map((item, index) => (
-              <div
-                key={index}
-                className="relative group rounded-2xl border border-[#3B82F6]/30 bg-gradient-to-b from-[#3B82F6]/10 to-white p-8 text-center transition-all duration-300 hover:border-[#3B82F6]/50 hover:shadow-lg hover:shadow-[#3B82F6]/15"
-              >
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-[#3B82F6]/12 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="text-center mt-4">
+            <h3 className="text-2xl md:text-3xl font-semibold text-[var(--cloud-text)] mb-4">
+              Du får varsler du kan stole på
+            </h3>
+            <p className="text-lg text-[var(--cloud-text-muted)] max-w-2xl mx-auto">
+              Ikke buzzwords. Bare konkrete prediksjoner basert på ekte data fra norske kilder.
+            </p>
 
-                {/* X mark in corner */}
-                <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#3B82F6]/10 flex items-center justify-center">
-                  <XIcon className="w-4 h-4 text-[#3B82F6]/60" />
-                </div>
-
-                {/* Icon */}
-                <div className="relative w-16 h-16 rounded-xl bg-gradient-to-br from-[#3B82F6]/10 to-[#06B6D4]/10 flex items-center justify-center mx-auto mb-6">
-                  <span className="text-[#0EA5E9]">{item.icon}</span>
-                </div>
-
-                <h3 className="relative text-xl font-semibold text-slate-800 mb-3">{item.title}</h3>
-                <p className="relative text-slate-500">{item.description}</p>
-              </div>
-            ))}
+            {/* Trust indicators */}
+            <div className="mt-8 flex flex-wrap justify-center gap-6">
+              <TrustBadge icon={<ShieldIcon className="w-5 h-5" />} text="Verifiserbare data" />
+              <TrustBadge icon={<NorwayIcon className="w-5 h-5" />} text="Norske kilder" />
+              <TrustBadge icon={<TransparencyIcon className="w-5 h-5" />} text="Full transparens" />
+            </div>
           </div>
         </div>
       </div>
@@ -74,9 +85,9 @@ export function DataTransparencyCloud2V1() {
 
 function TrustBadge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
-    <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-slate-200 shadow-sm">
-      <span className="text-[#3B82F6]">{icon}</span>
-      <span className="text-sm font-medium text-slate-700">{text}</span>
+    <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-[var(--cloud-border)] shadow-sm">
+      <span className="text-[var(--cloud-blue)]">{icon}</span>
+      <span className="text-sm font-medium text-[var(--cloud-text)]">{text}</span>
     </div>
   )
 }

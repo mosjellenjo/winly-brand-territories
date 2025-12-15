@@ -64,10 +64,15 @@ export function SocialProofCloud2V1() {
             {logos.map((logo, i) => (
               <div
                 key={`logo-1-${i}`}
-                className="flex items-center justify-center h-12 px-4 opacity-30 hover:opacity-60 transition-opacity"
+                className="flex items-center justify-center h-12 px-4 opacity-70 hover:opacity-100 transition-opacity"
                 style={{ minWidth: logo.width }}
               >
-                <span className="text-slate-500 text-lg font-medium tracking-wide">
+                <span
+                  className="text-lg font-bold tracking-wide bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage: 'linear-gradient(90deg, rgb(59, 130, 246), rgb(14, 165, 233), rgb(6, 182, 212))',
+                  }}
+                >
                   {logo.name}
                 </span>
               </div>
@@ -76,10 +81,15 @@ export function SocialProofCloud2V1() {
             {logos.map((logo, i) => (
               <div
                 key={`logo-2-${i}`}
-                className="flex items-center justify-center h-12 px-4 opacity-30 hover:opacity-60 transition-opacity"
+                className="flex items-center justify-center h-12 px-4 opacity-70 hover:opacity-100 transition-opacity"
                 style={{ minWidth: logo.width }}
               >
-                <span className="text-slate-500 text-lg font-medium tracking-wide">
+                <span
+                  className="text-lg font-bold tracking-wide bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage: 'linear-gradient(90deg, rgb(59, 130, 246), rgb(14, 165, 233), rgb(6, 182, 212))',
+                  }}
+                >
                   {logo.name}
                 </span>
               </div>

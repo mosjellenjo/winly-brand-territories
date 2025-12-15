@@ -1,0 +1,7 @@
+export { HeroCloudV1 } from './HeroCloudV1'
+export { ProblemSectionV1 } from './ProblemSectionV1'
+export { HowItWorksSectionV1 } from './HowItWorksSectionV1'
+export { UseCasesSectionV1 } from './UseCasesSectionV1'
+export { WhatWeAreNotSectionV1 } from './WhatWeAreNotSectionV1'
+export { TechnologySectionV1 } from './TechnologySectionV1'
+export { GetStartedSectionV1 } from './GetStartedSectionV1'

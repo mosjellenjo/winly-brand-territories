@@ -20,7 +20,16 @@
       "Bash(del inspect-devin.js inspect-devin-2.js inspect-devin-3.js)",
       "Bash(del:*)",
       "Bash(node:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd brand territory landing pages (T1-T4) with multiple versions\n\n- T1 Modern Tech: 7 versions exploring modern tech aesthetic\n- T2 Calm: 5 versions with calm, professional styling\n- T3 Playful: 2 versions with playful branding\n- T4 Truth Engine: 15 versions inspired by Devin.ai\n  - Interactive grid glow effect with mouse tracking\n  - Marble background with frozen sizing\n  - Auto-cycling use case cards with progress bars\n  - Arrow buttons with hover animations\n  - Responsive layout with Norwegian copy\n\nLatest v15 includes:\n- Subtle always-visible grid (Devin.ai style)\n- Gradient-colored headline with comma\n- Compressed arrow button heights\n- Updated copy and positioning\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(npm update:*)",
+      "Bash(npm audit fix:*)",
+      "Bash(git commit:*)",
+      "Bash(git checkout:*)",
+      "Bash(npm run dev:*)",
+      "Bash(mkdir:*)",
+      "Bash(npx vercel:*)"
     ],
     "deny": [],
     "ask": []
