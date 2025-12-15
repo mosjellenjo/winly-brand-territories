@@ -21,34 +21,37 @@ export function UseCasesCloud2V1() {
   const useCases: UseCase[] = [
     {
       id: 'supplier',
-      title: 'Leverandører',
-      subtitle: 'Se hvilke kommuner, sektorer eller direktorat som planlegger neste utlysning',
+      title: 'Leverandører til det offentlige',
+      subtitle: 'Få innsikten du trenger for å effektivt finne, vurdere og vinne de riktige anbudene kvartaler før de utlyses.',
       items: [
-        'Varsles før konkurrenter om nye anbud',
-        'Forstå budsjettmønstre på tvers av kommuner',
-        'Se historiske vinnere og markedsandeler',
+        'Prediker relevante utlysninger for din virksomhet',
+        'Tidlig varsel om behov og historiske mønstre',
+        'Raskere go/no-go vurdering med dyp konkurranseinnsikt',
+        'Bygg pipeline flere kvartaler frem i tid',
+        'Øk vinnersjansene med bedre innsikt og tid',
       ],
       preview: <SupplierPreview />,
     },
     {
       id: 'cfo',
-      title: 'CFO og lederteam',
-      subtitle: 'Forstå hvilke områder som gir mest vekst fremover',
+      title: 'Lederteam og vekstfunksjoner',
+      subtitle: 'Gjør strategiske valg med selvtillit - med oversikt over alle muligheter, kunder og konkurrenter.',
       items: [
         'Datadrevne beslutninger om markedsfokus',
-        'Identifiser sektorer med høyest vekstpotensial',
         'Planlegg ressursallokering basert på prediksjoner',
+        'Identifisér konkurrenters bevegelser og offentlige signaler',
+        'Underbygg strategivalg med presis, hard data',
       ],
       preview: <CFOPreview />,
     },
     {
       id: 'sales',
-      title: 'Markedsteam og salg',
-      subtitle: 'Identifiser når og hvor innsats gir høyest ROI',
+      title: 'Salg- og markedsteam',
+      subtitle: 'Finn, forstå og vinn norske B2B-kunder med det mest komplette og sammenkoblede universet av bedrifts-, person- og anbudsdata i Norge.',
       items: [
-        'Prioriter leads basert på kjøpssignaler',
-        'Timing av outreach for maksimal effekt',
-        'Fokuser kampanjer der det faktisk skal regne',
+        'Bygg leadslister på sekunder med lead-data fra over 1 million norske selskaper',
+        'Leadscoring basert på faktiske endringer og signaler',
+        'Fyll pipeline med faktabaserte muligheter, ikke gjetting',
       ],
       preview: <SalesPreview />,
     },
@@ -101,11 +104,28 @@ export function UseCasesCloud2V1() {
         <div className="mx-auto" style={{ maxWidth: 'calc(100% - 140px)' }}>
           {/* Section header */}
           <div className="mb-12">
-            <h2 className="text-3xl sm:text-4xl font-normal text-slate-800 tracking-tight">
-              Hva du kan bruke det til
+            <h2 className="text-3xl sm:text-4xl font-normal text-slate-800 tracking-tight pb-1">
+              Gi teamet{' '}
+              <span
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage: 'linear-gradient(90deg, rgb(59, 130, 246), rgb(14, 165, 233), rgb(6, 182, 212))',
+                }}
+              >
+                superkrefter
+              </span>{' '}
+              med{' '}
+              <span
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage: 'linear-gradient(90deg, rgb(59, 130, 246), rgb(14, 165, 233), rgb(6, 182, 212))',
+                }}
+              >
+                Winly
+              </span>
             </h2>
             <p className="mt-3 text-lg text-slate-500">
-              For hvem som helst som selger til bedrifter eller deltar i konkurranser
+              Ditt værkart for forutsigbar vekst - prognostiser, identifiser og lukk salg, forny, utvid og bygg pipeline.
             </p>
           </div>
 
@@ -249,13 +269,6 @@ export function UseCasesCloud2V1() {
             })}
           </div>
 
-          {/* Bottom quote */}
-          <blockquote className="mt-12 text-center">
-            <p className="text-xl md:text-2xl font-medium text-slate-700 max-w-3xl mx-auto">
-              Ikke kast bort tid på tilfeldige kampanjer.{' '}
-              <span className="text-[#F97316]">Sikt deg inn der det faktisk skal regne.</span>
-            </p>
-          </blockquote>
         </div>
       </div>
     </section>

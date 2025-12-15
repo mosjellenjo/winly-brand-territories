@@ -26,7 +26,16 @@ export function DataTransparencyCloud2V1() {
           {/* Section header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-normal text-slate-800 tracking-tight">
-              Hva vi <span className="text-slate-400 line-through">ikke</span> er
+              Hva vi{' '}
+              <span
+                className="line-through bg-clip-text text-transparent"
+                style={{
+                  backgroundImage: 'linear-gradient(90deg, rgb(59, 130, 246), rgb(14, 165, 233), rgb(6, 182, 212))',
+                }}
+              >
+                ikke
+              </span>{' '}
+              er
             </h2>
             <p className="mt-4 text-lg text-slate-500">
               Ikke en katalog. Ikke en AI-chatbot. Ikke gjetning.
@@ -34,24 +43,26 @@ export function DataTransparencyCloud2V1() {
           </div>
 
           {/* Not items grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {notItems.map((item, index) => (
               <div
                 key={index}
-                className="relative bg-white rounded-2xl p-8 border border-slate-200 text-center group hover:border-red-200 transition-colors"
+                className="relative group rounded-2xl border border-[#3B82F6]/30 bg-gradient-to-b from-[#3B82F6]/10 to-white p-8 text-center transition-all duration-300 hover:border-[#3B82F6]/50 hover:shadow-lg hover:shadow-[#3B82F6]/15"
               >
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-[#3B82F6]/12 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
                 {/* X mark in corner */}
-                <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-red-50 text-red-400 flex items-center justify-center">
-                  <XIcon className="w-4 h-4" />
+                <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#3B82F6]/10 flex items-center justify-center">
+                  <XIcon className="w-4 h-4 text-[#3B82F6]/60" />
                 </div>
 
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-6 group-hover:bg-red-50 group-hover:text-red-400 transition-colors">
-                  {item.icon}
+                <div className="relative w-16 h-16 rounded-xl bg-gradient-to-br from-[#3B82F6]/10 to-[#06B6D4]/10 flex items-center justify-center mx-auto mb-6">
+                  <span className="text-[#0EA5E9]">{item.icon}</span>
                 </div>
 
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">{item.title}</h3>
-                <p className="text-slate-500">{item.description}</p>
+                <h3 className="relative text-xl font-semibold text-slate-800 mb-3">{item.title}</h3>
+                <p className="relative text-slate-500">{item.description}</p>
               </div>
             ))}
           </div>

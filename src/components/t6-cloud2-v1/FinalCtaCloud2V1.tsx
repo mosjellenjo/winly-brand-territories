@@ -123,43 +123,41 @@ export function FinalCtaCloud2V1() {
   }, [])
 
   return (
-    <section className="relative bg-gradient-to-br from-[#3B82F6] via-[#2563EB] to-[#3B82F6] py-32 overflow-hidden">
+    <section className="relative py-20 overflow-hidden" style={{ background: 'linear-gradient(180deg, #3B82F6 0%, #2563EB 50%, #1E40AF 100%)' }}>
       <canvas
         ref={canvasRef}
         className="absolute inset-0 pointer-events-none"
         style={{ zIndex: 1 }}
       />
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-white/10 via-white/5 to-white/10 rounded-full blur-[120px]" />
+      {/* Subtle gradient orbs */}
+      <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-gradient-to-r from-cyan-400/20 to-transparent rounded-full blur-[100px]" />
+      <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-gradient-to-l from-blue-300/15 to-transparent rounded-full blur-[80px]" />
 
       <div className="relative z-10" style={{ padding: '0 70px' }}>
         <div className="mx-auto" style={{ maxWidth: 'calc(100% - 140px)' }}>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-tight">
-              Se hvordan værkartet ditt ser ut
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white tracking-tight leading-tight">
+              Se ditt værkart for vekst i dag!
             </h2>
 
-            <p className="mt-8 text-lg text-blue-100 leading-relaxed">
-              Få en personlig demo av Winly og se hvordan du kan forutse neste mulighet i din bransje.
-            </p>
-
-            <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="#"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-normal text-[#2563EB] bg-white rounded-lg transition-all hover:bg-blue-50 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center px-7 py-3.5 text-base font-medium text-[#2563EB] bg-white rounded-lg transition-all hover:bg-blue-50 shadow-lg hover:shadow-xl"
               >
                 Start gratis prøveperiode
                 <ArrowRightIcon className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-normal text-white rounded-lg transition-all border-2 border-white/30 hover:bg-white/10 hover:border-white/50"
+                className="inline-flex items-center justify-center px-7 py-3.5 text-base font-medium text-white rounded-lg transition-all border border-white/40 hover:bg-white/10 hover:border-white/60"
               >
                 Snakk med oss
               </a>
             </div>
 
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
               <TrustIndicator text="Ingen kredittkort" />
               <TrustIndicator text="14 dagers prøveperiode" />
               <TrustIndicator text="Full tilgang til alle funksjoner" />
@@ -167,31 +165,31 @@ export function FinalCtaCloud2V1() {
           </div>
 
           {/* Footer */}
-          <footer className="mt-20 pt-10 border-t border-white/20">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <footer className="mt-16 pt-8 border-t border-white/15">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-white">
-                <span className="text-2xl font-semibold">Winly</span>
-                <p className="mt-2 text-blue-100 text-sm">Norges første værkart for B2B-muligheter</p>
+                <span className="text-xl font-semibold">Winly</span>
+                <p className="mt-1 text-white/60 text-sm">Norges første værkart for B2B-muligheter</p>
               </div>
-              <div className="flex flex-wrap justify-center gap-6">
-                <a href="#" className="text-blue-100 hover:text-white transition-colors text-sm">
+              <div className="flex flex-wrap justify-center gap-5">
+                <a href="#" className="text-white/60 hover:text-white transition-colors text-sm">
                   Produkter
                 </a>
-                <a href="#" className="text-blue-100 hover:text-white transition-colors text-sm">
+                <a href="#" className="text-white/60 hover:text-white transition-colors text-sm">
                   Priser
                 </a>
-                <a href="#" className="text-blue-100 hover:text-white transition-colors text-sm">
+                <a href="#" className="text-white/60 hover:text-white transition-colors text-sm">
                   Om oss
                 </a>
-                <a href="#" className="text-blue-100 hover:text-white transition-colors text-sm">
+                <a href="#" className="text-white/60 hover:text-white transition-colors text-sm">
                   Kontakt
                 </a>
-                <a href="#" className="text-blue-100 hover:text-white transition-colors text-sm">
+                <a href="#" className="text-white/60 hover:text-white transition-colors text-sm">
                   Personvern
                 </a>
               </div>
+              <p className="text-white/40 text-sm">&copy; 2024 Winly. Alle rettigheter reservert.</p>
             </div>
-            <p className="mt-8 text-center text-blue-200 text-sm">&copy; 2024 Winly. Alle rettigheter reservert.</p>
           </footer>
         </div>
       </div>

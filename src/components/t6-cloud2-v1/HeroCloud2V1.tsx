@@ -96,9 +96,9 @@ export function HeroCloud2V1() {
 
       const speedMultiplier = Math.min(1, speed / 20)
       // Base opacity for always-visible subtle grid (light theme)
-      const baseGridOpacity = 0.06
-      const normalOpacityBoost = 0.12
-      const fastMovementBoost = speed > 15 ? Math.min(0.15, (speed - 15) / 40) : 0
+      const baseGridOpacity = 0.02
+      const normalOpacityBoost = 0.04
+      const fastMovementBoost = speed > 15 ? Math.min(0.05, (speed - 15) / 40) : 0
 
       colorPhaseRef.current += 0.025
 
@@ -213,7 +213,7 @@ export function HeroCloud2V1() {
   }, [])
 
   const steps = [
-    { num: 1, title: 'Datainnsamling', description: 'Vi samler all offentlig, finansiell og kommersiell data' },
+    { num: 1, title: 'Datainnsamling', description: 'Vi samler og strukturerer all offentlig, finansiell og kommersiell data' },
     { num: 2, title: 'Mønstergjenkjenning', description: 'Vi trener modeller til å gjenkjenne mønstre og knytte relasjoner' },
     { num: 3, title: 'Værkart for muligheter', description: 'Prediktiv innsikt om fremtidige forretningsmuligheter' },
     { num: 4, title: 'Signaldrevet varsling', description: 'Bli varslet når data og signaler tyder på at mulighetsbildet endres.' },
@@ -249,7 +249,7 @@ export function HeroCloud2V1() {
             </span>
           </div>
 
-          <nav className="flex-1 flex items-center justify-between rounded-xl border border-slate-200/80 bg-white/70 backdrop-blur-xl px-2 py-2 transition-colors duration-300 hover:bg-white/90 shadow-sm">
+          <nav className="flex-1 flex items-center justify-between rounded-xl border border-slate-200/50 bg-white/40 backdrop-blur-xl px-2 py-2 transition-colors duration-300 hover:bg-white/60 shadow-sm">
             <div className="flex items-center gap-1">
               <NavItem label="Hjem" active />
               <NavItem label="Produkt" />
@@ -299,7 +299,14 @@ export function HeroCloud2V1() {
                 <span className="text-slate-700"> Norges første</span>
                 <br />
                 <span className="text-slate-700">værkart for </span>
-                <span className="text-[#3B82F6]">B2B-muligheter</span>
+                <span
+                  className="bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage: 'linear-gradient(90deg, rgb(59, 130, 246), rgb(14, 165, 233), rgb(6, 182, 212))',
+                  }}
+                >
+                  vekstmuligheter
+                </span>
               </h1>
 
               <div className="mt-8">
@@ -1168,7 +1175,7 @@ export function HeroCloud2V1() {
       {/* Bottom text */}
       <div className="relative z-10 text-center pb-8 -mt-4 px-10">
         <p className="text-slate-400 text-base">
-          For hvem som helst som selger til bedrifter eller deltar i konkurranser.{' '}
+          For team som ønsker bedre oversikt, bedre beslutninger og raskere vekst.{' '}
           <a href="#" className="text-[#3B82F6] hover:text-[#0EA5E9] transition-colors">
             Se bruksområder.
           </a>
