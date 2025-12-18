@@ -215,10 +215,10 @@ export function HeroCloud2V1() {
   }, [])
 
   const steps = [
-    { num: 1, title: 'Datainnsamling', description: 'Vi samler og strukturerer all offentlig, finansiell og kommersiell data' },
-    { num: 2, title: 'Mønstergjenkjenning', description: 'Vi trener modeller til å gjenkjenne mønstre og knytte relasjoner' },
-    { num: 3, title: 'Værkart for muligheter', description: 'Prediktiv innsikt om fremtidige forretningsmuligheter' },
-    { num: 4, title: 'Signaldrevet varsling', description: 'Bli varslet når data og signaler tyder på at mulighetsbildet endres.' },
+    { num: 1, title: 'Helhetlig datainnsamling', description: 'Vi samler og strukturerer all offentlig, finansiell og kommersiell data' },
+    { num: 2, title: 'Tidlig mønstergjenkjenning', description: 'Vi trener modeller til å gjenkjenne mønstre og knytte relasjoner' },
+    { num: 3, title: 'Forutsigbart værkart for muligheter', description: 'Prediktiv innsikt om fremtidige forretningsmuligheter' },
+    { num: 4, title: 'Signaler som varsler før markedet endres', description: 'Bli varslet når data og signaler tyder på at mulighetsbildet endres.' },
   ]
 
   const stepPreviews = [
